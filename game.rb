@@ -5,25 +5,23 @@ require './turn'
 # include Player
 # include Question
 
-player_one = Player.new("Player_one")
+# player_one = Player.new("Player_one")
 
 question = Question.new
+answer = question.answer
 
 puts question.question
 
-# Game will hold the entirety together
+user_answer = gets.chomp 
+user_integer = user_answer.to_i
+
+if user_integer == answer
+  puts "Correct! The right answer is: #{answer}"
+else 
+  puts "Nope, that's so wrong. The correct answer is: #{answer}"
+end
+
 class Game
-  # puts "Hello, #{player_one}. What is #{number1} + #{number2}?"
-  
-  user_answer = gets.chomp 
-  user_integer = user_answer.to_i
-
-  # if user_integer == answer 
-  #   puts "Correct! The right answer is: #{answer}"
-  #   else 
-  #     puts "Nope, that's so wrong. The correct answer is: #{answer}"
-  # end
-
 end
 
 # puts player_name = "Player One, what is your name?"
