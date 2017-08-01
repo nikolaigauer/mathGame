@@ -14,7 +14,7 @@ class Question
   if user_integer == answer 
     puts "Correct! The right answer is: #{answer}"
     else 
-      puts "NO! That's so wrong! The correct answer is: #{answer}"
+      puts "Nope, that's so wrong. The correct answer is: #{answer}"
   end
   
 end
