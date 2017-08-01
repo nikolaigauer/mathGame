@@ -7,5 +7,14 @@ class Question
   number2 = random_number.rand(1..10)
   answer = number1 + number2
   puts "What is #{number1} + #{number2}?"
-  puts "#{answer}"
+  
+  user_answer = gets.chomp 
+
+  if user_answer == answer 
+    puts "Correct! The right answer is: #{answer}"
+    else 
+      puts "NO! That's so wrong! The correct answer is: #{answer}"
+  end
+  
 end
+
