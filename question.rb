@@ -9,8 +9,9 @@ class Question
   puts "What is #{number1} + #{number2}?"
   
   user_answer = gets.chomp 
+  user_integer = user_answer.to_i
 
-  if user_answer == answer 
+  if user_integer == answer 
     puts "Correct! The right answer is: #{answer}"
     else 
       puts "NO! That's so wrong! The correct answer is: #{answer}"
