@@ -3,9 +3,15 @@
 # will hold life as initial state method
 
 class Player
-  attr_reader :name
+  # player1 = Player.new('Player One')
+  attr_accessor :name
+
 
   def initialize(name)
     @name = name
+    @life = 3
   end
+
+  # puts "this is from player"
+
 end
