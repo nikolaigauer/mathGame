@@ -1,5 +1,3 @@
-# Player will keep track of life method wich will be initialized with 3/3 lives
-# will get instructions from Turn which turn it is
 require './player'
 require './question'
 require './turn'
@@ -13,7 +11,9 @@ player2 = Player.new('Player Two')
 class Game
 end
 
-# Question will hold questions and get instructions from Turn when to fire questions
-# Hmm should also receive answers?
+puts player_name = "Player One, what is your name?"
+player1_name = gets.chomp
+puts welcome = "Welcome to MATH QUEST #{player1_name}!!!!"
+puts start = "Let's begin the quest. What is 1 + 1?"  
 
-# Turn will hold the turn logic
+
