@@ -2,6 +2,10 @@
 # will get instructions from Turn which turn it is
 require './player'
 require './question'
+require './turn'
+
+player1 = Player.new('Player One')
+player2 = Player.new('Player Two')
 
 
 
