@@ -3,30 +3,23 @@
 
 class Question
   # include Player
-  attr_reader :answer, :question
+  attr_reader :question, :answer
 
-  def initialize
+  def initialize(currentPlayer)
     random_number = Random.new
     @number1 = random_number.rand(1..10)
     @number2 = random_number.rand(1..10)
     @answer = @number1 + @number2
     @question = "Hello, what is #{@number1} + #{@number2} ?"
+    user_answer = gets.chomp 
+    user_integer = user_answer.to_i
+    if user_integer == @answer
+      puts "Correct!"
+    else
+      puts "Wrong!"
+      currentPlayer.lose_life
+    end
   end
 
-  def correct_answer?(attempt)
-    attempt = @answer
-  end
-
-  # puts "Hello, #{@player1.name}. What is #{number1} + #{number2}?"
-  
-  # user_answer = gets.chomp 
-  # user_integer = user_answer.to_i
-
-  # if user_integer == answer 
-  #   puts "Correct! The right answer is: #{answer}"
-  #   else 
-  #     puts "Nope, that's so wrong. The correct answer is: #{answer}"
-  # end
-  
 end
 
