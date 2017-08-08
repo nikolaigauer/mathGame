@@ -2,7 +2,6 @@
 # Hmm should also receive answers?
 
 class Question
-  # include Player
   attr_reader :question, :answer
 
   def initialize(currentPlayer)
