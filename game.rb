@@ -1,47 +1,26 @@
-require 'beep'
-
-require './player'
-require './question'
-require './turn'
-
-Beep::Sound.generate
-sounds = [
-  {:frequency => 100, :duration => 200, :pause => 300},
-  {:frequency => 400, :duration => 500, :pause => 600},
-  {:frequency => 700, :duration => 800, :pause => 900},
-]
-
-Beep::Sound.generate(sounds)
-
-# require 'io/console'
-# rows, columns = $stdin.winsize
-# puts "Your screen is #{columns} wide and #{rows} tall"
-
-# include Player
-# include Question
-
-# player_one = Player.new("Player_one")
-
-question = Question.new
-answer = question.answer
-# correct_answer?
-puts question.question
-
-user_answer = gets.chomp 
-user_integer = user_answer.to_i
-
-if user_integer == answer
-  puts "Correct! The right answer is: #{answer}"
-else 
-  puts Beep::Sound.generate #"\a Nope, that's so wrong. The correct answer is: #{answer}"
-end
 
 class Game
+  def initialize(player1, player2)
+    @turns_left = 5
+    puts "welcome to this crazy math game"
+    # while @turns_left > 0 && player1.lives > 0 && player2.lives > 0 do
+    #   turn = Turn.new(player1, player2, @turns_left) 
+    #   @turns_left = @turns_left - 1
+    # end
+  end
+
+
 end
 
-# puts player_name = "Player One, what is your name?"
-# player1_name = gets.chomp
-# puts welcome = "Welcome to MATH QUEST #{player1_name}!!!!"
-# puts start = "Let's begin the quest. What is 1 + 1?"  
 
-
+    # if(player1.lives > player2.lives)
+    #   winner = player1
+    #   loser = player2
+    #   puts "Game Over! Player #{loser.number} is retarded and Player #{winner.number} still has #{winner.lives} lives left. Now go back to real life."
+    # elsif(player2.lives > player1.lives)
+    #   winner = player2
+    #   loser = player1
+    #   puts "Game Over! Player #{loser.number} is retarded and Player #{winner.number} still has #{winner.lives} lives left. Now go back to real life."
+    # else
+    #   puts "Nobody won, exciting."
+    # end  
